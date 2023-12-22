@@ -31,3 +31,7 @@ To submit a solution:
     * Fork this repository
     * Make your edits and push them to your fork
     * Open a PR!
+
+## Questions?
+If something here is unclear, feel free to reach out to you recruiter, and
+they'll get you in contect with somebody who can answer your questions.
