@@ -19,9 +19,6 @@ implementation that can:
       where the same handler would execute for both "/foo/asdf" and
       "/foo/qwerty". Path parameters should be passed into the request handler
       either as function parameters, or within a Request object.
-    * Support adding and executing arbitrary middlewares in the router.
-      Middleware should support performing some functionality on both the
-      incoming request and the outgoing response.
 
 We've added some starter code in the `getting_started` directory. Feel free to
 use that as a way to get moving, adapt it to the language of your choosing, or
