@@ -15,8 +15,10 @@ implementation that can:
 
     * Route an HTTP path and method to a function, and return an error code and
       message.
-    * Support path parameters for HTTP paths (i.e. support "/foo/{bar}" where
-      the same handler would execute for both "/foo/asdf" and "/foo/qwerty".
+    * Support path parameters for HTTP paths. For example: support "/foo/{bar}"
+      where the same handler would execute for both "/foo/asdf" and
+      "/foo/qwerty". Path parameters should be passed into the request handler
+      either as function parameters, or within a Request object.
     * Support adding and executing arbitrary middlewares in the router.
       Middleware should support performing some functionality on both the
       incoming request and the outgoing response.
