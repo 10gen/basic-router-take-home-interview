@@ -7,7 +7,7 @@ Here are some pointers:
       javascript, rust, etc.
     * We prefer clean code that's easy to follow.
     * All solutions should be runnable easily.
-    * All solutions should have tests.
+    * All solutions should have tests verifying implemented functionality.
 
 ## What's the problem?
 We (you!) are going to build an HTTP Router. We're looking for a clean
@@ -17,7 +17,7 @@ implementation that can:
       message.
     * Support path parameters for HTTP paths (i.e. support "/foo/{bar}" where
       the same handler would execute for both "/foo/asdf" and "/foo/qwerty".
-    * Support adding and executing arbitrary middlewares into the router.
+    * Support adding and executing arbitrary middlewares in the router.
       Middleware should support performing some functionality on both the
       incoming request and the outgoing response.
 
@@ -34,4 +34,4 @@ To submit a solution:
 
 ## Questions?
 If something here is unclear, feel free to reach out to you recruiter, and
-they'll get you in contect with somebody who can answer your questions.
+they'll get you in contact with somebody who can answer your questions.
