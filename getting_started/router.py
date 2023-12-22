@@ -1,36 +1,47 @@
 #!/usr/bin/env python3
 
-import typing
-
 """Starter code for a python router."""
 
-ErrorCode = int
+import typing
+
+ResponseCode = int
 HTTPBody = str
-RequestResponse = typing.Tuple[ErrorCode, HTTPBody]
+RequestResponse = typing.Tuple[ResponseCode, HTTPBody]
+RequestHandler = typing.Callable[[str], RequestResponse]
+
 
 class Router:
     """Router class."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Constructor."""
         pass
 
-    def add_route(self, method: str, path: str, handler: typing.typing.Callable[[], RequestResponse]) -> None:
+    def add_route(
+        self,
+        method: str,
+        path: str,
+        handler: RequestHandler,
+    ) -> None:
         """Add a route to the router."""
         pass
 
-    def route(self, method: str, path: str, body: str) -> RequestResponse:
+    def route(self, method: str, path: str, body: HTTPBody) -> RequestResponse:
         """Route an HTTP request, returing the repsonse."""
         pass
 
+
 def main() -> None:
-	"""Main method!"""
-	router = Router()
-	def echo(body) -> RequestResponse:
-		"""Echo some data back."""
-		return 200, body
-	router.add_route("GET", "/echo", echo)
-	assert (200, "it works!") == router.route("GET", "/echo", "it works!")
+    """Main method!"""
+    router = Router()
+
+    def echo(body: HTTPBody) -> RequestResponse:
+        """Echo some data back."""
+        return 200, body
+
+    router.add_route("GET", "/echo", echo)
+    assert (200, "it works!") == router.route("GET", "/echo", "it works!")
+
 
 if __name__ == "__main__":
-	main()
+    main()
