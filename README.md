@@ -22,8 +22,8 @@ implementation that can:
       incoming request and the outgoing response.
 
 We've added some starter code in the `getting_started` directory. Feel free to
-use that as a way to get moving, or disregard it completely for your own
-solution.
+use that as a way to get moving, adapt it to the language of your choosing, or
+disregard it completely for your own solution.
 
 ## How to submit a solution?
 To submit a solution:
